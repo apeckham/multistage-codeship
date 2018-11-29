@@ -1,17 +1,17 @@
-- name: app1_step
-  service: app1
-  command: sh -c "ls /tmp/a && echo 'running tests'"
+- command: cat /tmp/q
+  service: stage-one
+  name: check tmp q
 
-- name: app2_step
-  service: app2
-  command: sh -c "ls /tmp/b && echo '/tmp/b is present only in the final image'"
+- command: cat /tmp/x
+  service: stage-two
+  name: check tmp x
 
-- name: push
+- name: push-stage-one
   type: push
-  service: app1
-  image_name: localhost:5000/app1
+  service: stage-one
+  image_name: localhost:5000/stage-one
 
-- name: push2
+- name: push-stage-two
   type: push
-  service: app2
-  image_name: localhost:5000/app2
+  service: stage-two
+  image_name: localhost:5000/stage-two

@@ -1,11 +1,11 @@
-app1:
+stage-one:
   build:
-    image: localhost:5000/app1
-    context: .
-    dockerfile: Dockerfile1
+    image: localhost:5000/stage-one
+    dockerfile: Dockerfile.stage-one
+  cached: true
 
-app2:
+stage-two:
   build:
-    image: localhost:5000/app2
-    context: .
-    dockerfile: Dockerfile2
+    image: localhost:5000/stage-two
+    dockerfile: Dockerfile.stage-two
+  cached: true

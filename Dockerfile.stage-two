@@ -1,0 +1,4 @@
+FROM localhost:5000/stage-one AS stage-one
+
+FROM busybox
+COPY --from=stage-one /tmp/q /tmp/x

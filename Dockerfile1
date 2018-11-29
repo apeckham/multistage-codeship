@@ -1,3 +1,0 @@
-FROM busybox AS build
-RUN ["echo", "in build~"]
-RUN ["touch", "/tmp/a"]
