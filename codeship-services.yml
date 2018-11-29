@@ -1,0 +1,11 @@
+app1:
+  build:
+    image: localhost:5000/app1
+    context: .
+    dockerfile: Dockerfile1
+
+app2:
+  build:
+    image: localhost:5000/app2
+    context: .
+    dockerfile: Dockerfile2

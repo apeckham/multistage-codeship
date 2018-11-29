@@ -1,0 +1,6 @@
+FROM busybox AS build
+RUN ["echo", "in build~"]
+RUN ["touch", "/tmp/a"]
+
+FROM busybox AS final
+COPY --from=build /tmp/a /tmp/b
