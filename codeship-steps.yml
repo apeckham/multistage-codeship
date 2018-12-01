@@ -1,6 +1,6 @@
-- command: cat /tmp/q
+- command: cat /tmp/zzz
   service: stage-one
-  name: check tmp q
+  name: check tmp zzz
 
 - command: cat /tmp/x
   service: stage-two
@@ -9,9 +9,9 @@
 - name: push-stage-one
   type: push
   service: stage-one
-  image_name: localhost:5000/stage-one
+  image_name: localhost:5050/stage-one
 
 - name: push-stage-two
   type: push
   service: stage-two
-  image_name: localhost:5000/stage-two
+  image_name: localhost:5050/stage-two

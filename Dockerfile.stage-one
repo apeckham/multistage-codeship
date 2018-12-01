@@ -1,2 +1,2 @@
 FROM busybox
-RUN ["touch", "/tmp/q"]
+RUN ["touch", "/tmp/zzz"]

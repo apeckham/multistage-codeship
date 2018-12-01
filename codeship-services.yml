@@ -1,11 +1,11 @@
 stage-one:
   build:
-    image: localhost:5000/stage-one
+    image: stage-one
     dockerfile: Dockerfile.stage-one
   cached: true
 
 stage-two:
   build:
-    image: localhost:5000/stage-two
+    image: stage-two
     dockerfile: Dockerfile.stage-two
   cached: true
