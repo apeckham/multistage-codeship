@@ -1,11 +1,9 @@
 stage-one:
   build:
-    image: stage-one
     dockerfile: Dockerfile.stage-one
   cached: true
 
 stage-two:
   build:
-    image: stage-two
     dockerfile: Dockerfile.stage-two
   cached: true
